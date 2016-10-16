@@ -2,15 +2,16 @@ clear all
 close all
 clc
 
+%% INPUT
 fluid='r134a';
-Tcella=-10; %ï¿½C
+Tcella=-10; %°C
 Tamb=20;
 Qev=0.2; %kW
 DT_sur=0;
 DT_sub=0;
 DT_min_ev=10;
 DT_min_covett=0:5:50;
-
+sono bellissimo
 %funzione per il rendimento del compressore f(x)=a*exp(-b*x)+c
 a=-2.648;
 b=1.553;
@@ -20,10 +21,10 @@ Tev=Tcella-DT_min_ev-DT_sur;
 Pev=refpropm('p','t',Tev+273.15,'q',1,fluid)/100;
 P1=Pev;
 if DT_sur==0
-    h1=refpropm('h','p',Pev*100,'q',1,fluid)/1000; %kJ |moltiplica per 100 perchï¿½ lo vuole in kPa
+    h1=refpropm('h','p',Pev*100,'q',1,fluid)/1000; %kJ |moltiplica per 100 perchè lo vuole in kPa
     s1=refpropm('s','p',Pev*100,'q',1,fluid)/1000; %kJ/K
 else
-    h1=refpropm('H','T',T1+273.15,'P',Pev*100,fluid)/1000; %kJ |moltiplica per 100 perchï¿½ lo vuole in kPa
+    h1=refpropm('H','T',T1+273.15,'P',Pev*100,fluid)/1000; %kJ |moltiplica per 100 perchè lo vuole in kPa
     s1=refpropm('S','T',T1+273.15,'P',Pev*100,fluid)/1000; %kJ/K
 end
 T1=Tev;
