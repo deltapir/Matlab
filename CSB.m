@@ -2,6 +2,7 @@ clear all
 close all
 clc
 
+%% INPUT
 fluid='r134a';
 Tcella=-10; %�C
 Tamb=20;
@@ -10,7 +11,7 @@ DT_sur=0;
 DT_sub=0;
 DT_min_ev=10;
 DT_min_covett=0:5:50;
-
+sono bellissimo
 %funzione per il rendimento del compressore f(x)=a*exp(-b*x)+c
 a=-2.648;
 b=1.553;
