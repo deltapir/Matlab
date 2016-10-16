@@ -4,16 +4,17 @@ clc
 ma se tipo aggiungessi tt sta roba qua?
 
 credo che sia meglio mangiare
+e dormire no?
 %% INPUT
 fluid='r134a';
 Tcella=-10; %°C
-#Tamb=20;
+Tamb=20;
 Qev=0.2; %kW
 DT_sur=0;
 
 DT_min_ev=10;
 DT_min_covett=0:5:50;
-sono bellissimo
+
 %funzione per il rendimento del compressore f(x)=a*exp(-b*x)+c
 a=-2.648;
 b=1.553;
